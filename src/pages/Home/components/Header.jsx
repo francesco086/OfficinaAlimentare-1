@@ -34,7 +34,7 @@ export default React.forwardRef((props, ref) => {
   return (
     <header ref={ref}>
       <Nav />
-      <Slider source="https://via.placeholder.com/1900x1000" overlay="https://via.placeholder.com/1900x1001" />
+      <Slider source="assets/images/slider/source.png" overlay="assets/images/slider/overlay.png" />
     </header>
   )
 });

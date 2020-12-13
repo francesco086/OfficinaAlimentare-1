@@ -21,13 +21,14 @@ code {
 .loader {
   &::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 9009;
     transition: background-color 1000ms ease-out; // THIS IS WHERE YOU SET LOADING-FADE-OFF
+    pointer-events: none
   }
   
   &.loading::after {

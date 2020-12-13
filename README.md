@@ -5,6 +5,7 @@
 2. Concepts
   - styling
   - page loader
+  - slider
   - portfolio
 3. Production
 4. Deployement
@@ -52,15 +53,24 @@ All the code will live under the src file
 All the styling is done in a language called `scss` which is basically `css` but abit easier 
 and the files can be found in folder `Styles` and each section has its own file under `Styles/sections`
 
+All the colors are defined in the `color.scss` file and are referenced by $ ex: `color: $WHITE;`
+this will make it easy to change colors really fast later on
+
 #### Page-Loader
 You should see that the page is first white and then fades away, this is the loader to "hide" the startup faze of the page, you can control this at 2 points
 1. The cool-off period which is the time it will take before it fades away (search for LOADING-COOL-OFF `cmd-shift-f`)
 2. The fade period, which is the duration of the actual animation (search for LOADING-FADE-OFF - now its 1000ms)
 
+#### Slider
+Follow the style for slider `styles/slider.scss` to style the drsgger
+To change the images just 
+replace the `source.png & overlay.png` under *public/assets/images/slider*
+
+
 #### Portfolio
 Make sure that all pdf-documents has a corresponding file
-and put the documents under `public/documents/portfolio`
-and with the same name but for images under `public/images/portfolio`
+and put the documents under `public/assets/documents/portfolio`
+and with the same name but for images under `public/assets/images/portfolio`
 
 Then inside the *Portfolio code* (found in `src/pages/Home/Components/Portfolio.jsx`)
 on line 5 there is a array called names, add all the document names here
