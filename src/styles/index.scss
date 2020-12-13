@@ -1,4 +1,5 @@
-@import 'colors.scss';
+@import 'colors';
+@import 'mixins';
 
 body {
   margin: 0;
@@ -14,93 +15,54 @@ code {
     monospace;
 }
 
-footer {
-  color: white;
-  
+@import 'footer';
+@import 'slider';
+
+.homepage {
+  // cursor: url(http://placehold.it/50x30) 25 15, auto;
+  width: 100vw;
+  overflow-x: hidden;
+
+  // general styling for all sections
   section {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  section.upper {
-    padding-top: 1rem !important;
-    height: 14rem;
-    background-color: $FOOTER_UPPER_BACKGROUND;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 15rem;
-
-    div {
-      padding: 2rem;
-      h2, h4 {
-        margin-bottom: 1rem;
-      }
-      p {
-        margin-bottom: 0.5rem;
-        font-size: smaller;
-      }
-
-      a {
-        color: $WHITE;
-      }
+    margin-bottom: 10rem;
+    padding-top: 5rem;
+    .section-heading {
+      text-align: center;
     }
   }
-  section.lower {
-    height: 3rem;
-    background-color: $FOOTER_LOWER_BACKGROUND;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: small;
-  }
+  // style for sections sre in seperasted files (in sections folder)
+  @import 'sections/header';
+  @import 'sections/service';
+  @import 'sections/team';
+  @import 'sections/story';
+  @import 'sections/portfolio';
 }
 
-.slider-container {
-  box-sizing: border-box;
-  position: relative;
-  height: 100%; /*should be the same height as the images*/
+// some global classes 
 
-  .slider-image {
-    box-sizing: border-box;
-    position: absolute;
-    width: auto;
-    height: 100%;
-    overflow: hidden;
-
-    & img {
-      // position: absolute;
-      // left: 50%;
-      // transform: translateX(-50%);
-      box-sizing: border-box;
-      display: block;
-      vertical-align: middle;
-    }
-
-    &.slider-overlay {
-      border-right: 1px solid $WHITE;
-    }
-  }
-
-  .slider-mover {
-    position: absolute;
-    z-index: 9;
-    cursor: ew-resize;
-    /*set the appearance of the slider:*/
-    width: 40px;
-    height: 40px;
-    background-color: #2196F3;
-    opacity: 0.7;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &.clicked {
-      background-color: #f38021;
-    }
-  }
-}
-
+// all texts with this class gets new font 
 .officina {
   font-family: 'Nobile', sans-serif;
+}
+
+// to create the pattern that story has
+.circle-dash {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  
+  &::before {
+    @include story-ball(6rem);
+    z-index: -1;
+    border: 2px dotted gray;
+  }
+
+  &::after {
+    @include story-ball(6.4rem);
+    z-index: -2;
+    background-color: white;
+    border: 1px solid gray;
+  }
 }

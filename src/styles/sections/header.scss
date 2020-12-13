@@ -1,0 +1,120 @@
+header {
+  margin-bottom: 5rem;
+  position: relative;
+  .slider-container {
+    height: 100vh;
+
+    img {
+      // width: 100%;
+      height: 100%;
+    }
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 4fr 3rem;
+    z-index: 100;
+    align-items: center;
+    height: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: height 200ms ease;
+
+    &.passed {
+      height: 4rem;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    div {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      &:last-child {
+        clear: both;
+      }
+    }
+    div.title {
+      color: $BLUE;
+    }
+    div.links {
+      display: flex;
+      justify-content: flex-end;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 5px;
+        list-style: none;
+        padding-right: 5px;
+
+        li {
+          background-color: transparent;
+          border-radius: 5px;
+          text-align: center;
+          word-break: keep-all;
+          padding: .6rem;
+
+          &:hover {
+            background-color: red;
+          }
+          a {
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+              color: black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    div.language {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        content: '';
+        width: 40%;
+        height: 10%;
+        background-color: $LANGUAGE_HIGHLIGHT_BACKGROUND;
+        transition: left 100ms ease-in;
+      }
+      &.en::before {
+        left: 55%;
+      }
+      span {
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: yellow;
+        }
+      }
+    }
+  }
+}
+
+// when screen size is below 480px we do this style (mobile)
+@media (max-width: 480px) {
+  header {
+    nav {
+      grid-template-columns: 1fr 0 !important;
+      div.title {
+        padding-left: 0 !important;
+        text-align: center;
+      }
+      div.links {
+        display: none;
+      }
+    }
+  }
+}

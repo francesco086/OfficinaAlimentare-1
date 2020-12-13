@@ -1,0 +1,41 @@
+footer {
+  color: white;
+  
+  section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  section.upper {
+    padding-top: 1rem !important;
+    height: 14rem;
+    background-color: $FOOTER_UPPER_BACKGROUND;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15rem;
+
+    div {
+      padding: 2rem;
+      h2, h4 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 0.5rem;
+        font-size: smaller;
+      }
+
+      a {
+        color: $WHITE;
+      }
+    }
+  }
+  section.lower {
+    height: 3rem;
+    background-color: $FOOTER_LOWER_BACKGROUND;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+  }
+}

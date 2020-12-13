@@ -11,8 +11,6 @@ import Team from './components/Team';
 import Context from './context';
 import Footer from 'components/Footer';
 
-import './styles.scss';
-
 class HomePage extends Component {
 
   state = {
