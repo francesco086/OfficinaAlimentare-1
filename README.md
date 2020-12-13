@@ -44,11 +44,14 @@ yarn start
 ```
 
 ### Concepts
-`yarn start` Will start your code in a development envionment meaning that
-you can change stuff and it should appear live for you.
+#### Styling
+All the styling is done in a language called `scss` which is basically `css` but abit easier 
+and the files can be found in folder `Styles` and each section has its own file under `Styles/sections`
 
-`yarn build` Will do the magic of merging and bundling your project into a folder called **build**.
-All of the contents will be later placed in your server of choise.
+#### Page-Loader
+You should see that the page is first white and then fades away, this is the loader to "hide" the startup faze of the page, you can control this at 2 points
+1. The cool-off period which is the time it will take before it fades away (search for LOADING-COOL-OFF `cmd-shift-f`)
+2. The fade period, which is the duration of the actual animation (search for LOADING-FADE-OFF - now its 1000ms)
 
 ### Produciton
 Run `yarn build` in the terminal and you should see a folder build after its done,
