@@ -6,7 +6,7 @@ section#portfolio {
     height: 40vh;
     min-height: 200px;
 
-    img {
+    a {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -14,6 +14,11 @@ section#portfolio {
       box-shadow: 1px 3px 4px rgb(104, 104, 104);
       transition: transform 200ms ease;
       z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
 
       &:hover {
         transform: translate(-50%, -50%) rotate(0) scale(0.4) !important;

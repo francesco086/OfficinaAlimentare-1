@@ -2,34 +2,25 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PropType from 'prop-types';
 
-const Portfolio = ({ name, x, y, angle }) => {
-  // const initial_transform = `translate(${x}%, ${y}%) rotate(${angle}deg) scale(0.3)`;
-  // const [transform, setTransform] = React.useState(initial_transform)
-  // const [z, setZ] = React.useState(1)
+const names = ["laura"];
 
-  // function hover() {
-  //   setTransform(`translate(${x}%, ${y}%) rotate(0deg) scale(0.4)`);
-  //   setZ(2);
-  // }
-
-  // function leave() {
-  //   setTransform(initial_transform);
-  //   setZ(1);
-  // }
-
-  // onMouseOver={hover} onMouseLeave={leave}
-  return (
+const Portfolio = ({ name, x, y, angle }) => (
+  <a 
+    href={`assets/documents/portfolio/${name}.pdf`} 
+    target="_blank" 
+    style={{ 
+      transform: `translate(-50%, -50%) rotate(${angle}deg) scale(0.3)`, 
+      left: `${x}%`, 
+      top: `${y}%` 
+    }} 
+  >
     <img 
-      src={`assets/images/portfolio/${"laura"}.png`} 
+      src={`assets/images/portfolio/${name}.png`} 
       alt={name} 
-      style={{ 
-        transform: `translate(-50%, -50%) rotate(${angle}deg) scale(0.3)`, 
-        left: `${x}%`, 
-        top: `${y}%` 
-      }} 
     />
-  )
-}
+  </a>
+)
+
 
 Portfolio.propTypes = {
   name: PropType.string,
@@ -41,7 +32,6 @@ Portfolio.propTypes = {
 const Component = props => {
   const { t } = useTranslation();
 
-  const names = ['laura1', 'laura2', 'laura3', 'laura4'];
   const properties = [];
 
   function getPosition (times = 0) {
