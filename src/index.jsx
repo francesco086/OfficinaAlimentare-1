@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Loader from 'Loader';
+import HomePage from './pages/Home';
 import reportWebVitals from './reportWebVitals';
+
+import 'translation/i18n';
+import './styles/index.scss';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Loader>
+        <HomePage />
+      </Loader>
   </React.StrictMode>,
   document.getElementById('root')
 );
