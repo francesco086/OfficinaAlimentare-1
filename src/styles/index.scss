@@ -27,7 +27,7 @@ code {
     width: 100vw;
     height: 100vh;
     z-index: 9009;
-    transition: background-color 1000ms ease-out;
+    transition: background-color 1000ms ease-out; // THIS IS WHERE YOU SET LOADING-FADE-OFF
   }
   
   &.loading::after {

@@ -12,7 +12,7 @@ export default ({ children }) => {
     setLoading("loading");
     timer.current = setTimeout(() => {
       setLoading("");
-    }, 520);
+    }, 520); // THIS IS WHERE YOU SET LOADING LOADING-COOL-OFF
     return () => {
       clearTimeout(timer.current);
     }
