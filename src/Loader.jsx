@@ -12,7 +12,7 @@ export default ({ children }) => {
     setLoading("loading");
     timer.current = setTimeout(() => {
       setLoading("");
-    }, 120);
+    }, 520);
     return () => {
       clearTimeout(timer.current);
     }
@@ -28,9 +28,11 @@ export default ({ children }) => {
     _setLanguage(language);
   }
 
+  console.log('loading', loading);
+
   return (
     <Context.Provider value={provides}>
-      <div className={loading}>{children}</div>
+      <div className={`loader ${loading}`}>{children}</div>
     </Context.Provider>
   );
 }
