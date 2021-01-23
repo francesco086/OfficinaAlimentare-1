@@ -28,8 +28,6 @@ export default ({ children }) => {
     _setLanguage(language);
   }
 
-  console.log('loading', loading);
-
   return (
     <Context.Provider value={provides}>
       <div className={`loader ${loading}`}>{children}</div>

@@ -1,21 +1,17 @@
 // define your style of dragger (you can also use background-image: url(..) )
 @mixin dragger {
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-
-  &.clicked {
-    background-color: #f38021;
-  }
 }
 
 
 .slider-container {
   box-sizing: border-box;
   position: relative;
-  height: 100%; /*should be the same height as the images*/
+  height: calc(100% - 3rem); /*should be the same height as the images*/
+  margin-top: 2rem;
+  // outline: 1px solid black; 
 
   .slider-image {
     box-sizing: border-box;
@@ -23,6 +19,7 @@
     width: auto;
     height: 100%;
     overflow: hidden;
+    text-align: center;
 
     & img {
       box-sizing: border-box;
@@ -32,7 +29,16 @@
     }
 
     &.slider-overlay {
-      border-right: 1px solid $WHITE;
+      background-color: white;
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 5%;
+        height: 90%;
+        width: 6px;
+        background-color: $BLACK;
+        content: '';
+      }
     }
   }
 
@@ -43,7 +49,7 @@
     /*set the appearance of the slider:*/
     
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-3px, -50%);
 
     @include dragger();
   }

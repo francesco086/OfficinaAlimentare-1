@@ -7,9 +7,24 @@ import MainContext from 'context';
 
 const Nav = () => {
   const { t } = useTranslation("");
+  const [uk, setUK] = React.useState(false);
+  const [it, setIT] = React.useState(false);
   const { language, setLanguage } = React.useContext(MainContext);
   const { passedHeader } = React.useContext(Context);
   const links = ["service", "team", "portfolio", "contact"];
+
+  function ukHover() {
+    setUK(true);
+  }
+  function ukNoHover() {
+    setUK(false);
+  }
+  function itHover() {
+    setIT(true);
+  }
+  function itNoHover() {
+    setIT(false);
+  }
 
   return (
     <nav className={passedHeader ? 'passed' : ''}>
@@ -22,8 +37,14 @@ const Nav = () => {
         </ul>
       </div>
       <div className={`language ${language}`}>
-        <span onClick={() => setLanguage('it')}>🇮🇹</span>
-        <span onClick={() => setLanguage('en')}>🇬🇧</span>
+        <span onClick={() => setLanguage('it')} onMouseOver={itHover} onMouseLeave={itNoHover}>
+          <img src="assets/images/flags/IT BW.svg" alt="it" />
+          {it && <img src="assets/images/flags/IT C.svg" alt="it-col" />}
+        </span>
+        <span onClick={() => setLanguage('en')} onMouseOver={ukHover} onMouseLeave={ukNoHover}>
+          <img src="assets/images/flags/UK BW.svg" alt="uk" />
+          {uk && <img src="assets/images/flags/UK C.svg" alt="uk-col" />}
+        </span>
       </div>
     </nav>
   )
@@ -34,7 +55,11 @@ export default React.forwardRef((props, ref) => {
   return (
     <header ref={ref}>
       <Nav />
-      <Slider source="assets/images/slider/source.png" overlay="assets/images/slider/overlay.png" />
+      <Slider 
+        source="assets/images/slider/source.svg" 
+        overlay="assets/images/slider/overlay.svg" 
+        logo="assets/images/slider/logo.svg" 
+      />
     </header>
   )
 });

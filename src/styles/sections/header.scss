@@ -18,14 +18,16 @@ header {
     grid-template-columns: 3fr 4fr 3rem;
     z-index: 100;
     align-items: center;
-    height: 5rem;
+    height: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    transition: height 200ms ease;
+    transition: background-color, box-shadow 200ms ease-out;
+    background-color: rgba(255, 255, 255, 0.7);
 
     &.passed {
-      height: 4rem;
-      background-color: rgba(0, 0, 0, 0.5);
+      // height: 4rem;
+      background-color: white;
+      box-shadow: 0 3px 10px rgb(235, 235, 235);
     }
 
     div {
@@ -38,7 +40,14 @@ header {
       }
     }
     div.title {
-      color: $BLUE;
+      h1 {
+        margin: 0;
+        font-size: 20pt;
+        a {
+          color: $BLACK;
+          text-decoration: none;
+        }
+      }
     }
     div.links {
       display: flex;
@@ -55,14 +64,10 @@ header {
 
         li {
           background-color: transparent;
-          border-radius: 5px;
           text-align: center;
           word-break: keep-all;
           padding: .6rem;
 
-          &:hover {
-            background-color: red;
-          }
           a {
             color: black;
             text-decoration: none;
@@ -70,6 +75,7 @@ header {
             &:hover {
               color: black;
               text-decoration: none;
+              font-weight: 800;
             }
           }
         }
@@ -77,26 +83,31 @@ header {
     }
     div.language {
       position: relative;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 80%;
-        left: 5%;
-        content: '';
-        width: 40%;
-        height: 10%;
-        background-color: $LANGUAGE_HIGHLIGHT_BACKGROUND;
-        transition: left 100ms ease-in;
-      }
-      &.en::before {
-        left: 55%;
-      }
+      display: flex;
+      height: 100%;
+      align-items: center;
+      
       span {
-        font-size: 1.5rem;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        position: relative;
         cursor: pointer;
+        justify-content: center;
+        align-content: center;
+        margin-right: 2px;
 
-        &:hover {
-          background-color: yellow;
+        &:last-child {
+          margin-left: 2px;
+          margin-right: 0;
+        }
+
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 100%;
+          transform: translate(-50%, -50%);
         }
       }
     }

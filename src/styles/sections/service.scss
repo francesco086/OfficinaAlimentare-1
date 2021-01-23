@@ -2,9 +2,18 @@ section#service {
   .service {
     text-align: center;
     padding: 0 2rem;
+    display: grid;
+    grid-template-rows: 5rem 2.5fr 3fr;
 
-    h4 {
-      text-align: left;
+    h4.service-heading {
+      text-align: center;
+    }
+    .image-container {
+      width: 100%;
+      text-align: center;
+      img {
+        height: 100%;
+      }
     }
   }
 }
