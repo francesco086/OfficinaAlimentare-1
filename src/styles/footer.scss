@@ -1,5 +1,6 @@
 footer {
   color: white;
+  position: relative;
   
   section {
     padding: 0 !important;
@@ -7,8 +8,8 @@ footer {
   }
   section.upper {
     padding-top: 1rem !important;
-    height: 14rem;
-    background-color: $FOOTER_UPPER_BACKGROUND;
+    height: 20rem;
+    background-color: $FOOTER_BACKGROUND;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,7 +32,7 @@ footer {
   }
   section.lower {
     height: 3rem;
-    background-color: $FOOTER_LOWER_BACKGROUND;
+    background-color: $FOOTER_BACKGROUND;
 
     display: flex;
     justify-content: center;
