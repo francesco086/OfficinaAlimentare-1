@@ -1,26 +1,26 @@
-@import 'colors';
-@import 'mixins';
+@import "colors";
+@import "mixins";
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-@import 'footer';
-@import 'slider';
+@import "footer";
+@import "slider";
 
 .loader {
   &::after {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ code {
     height: 100vh;
     z-index: 9009;
     transition: background-color 1000ms ease-out; // THIS IS WHERE YOU SET LOADING-FADE-OFF
-    pointer-events: none
+    pointer-events: none;
   }
   // .hole {
   // position: absolute;
@@ -38,7 +38,7 @@ code {
   // height: 150px;
   // box-shadow: 0 0 0 9999px rgba(0, 0, 255, 0.2);
   // }
-  
+
   &.loading::after {
     background-color: white;
   }
@@ -46,7 +46,7 @@ code {
 
 .homepage {
   // cursor: url(http://placehold.it/50x30) 25 15, auto;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 
   // general styling for all sections
@@ -56,6 +56,9 @@ code {
     .section-heading {
       text-align: left;
     }
+    .section-subheading {
+      width: 40%;
+    }
   }
 
   .container {
@@ -63,47 +66,63 @@ code {
   }
 
   // style for sections sre in seperasted files (in sections folder)
-  @import 'sections/header';
-  @import 'sections/service';
-  @import 'sections/team';
-  @import 'sections/story';
-  @import 'sections/portfolio';
+  @import "sections/header";
+  @import "sections/service";
+  @import "sections/team";
+  @import "sections/story";
+  @import "sections/portfolio";
 }
 
+// MAX WIDTHS
+@media (max-width: 576px) {
+  .homepage {
+    section {
+      .section-subheading {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// MIN WIDTHS
 @media (min-width: 576px) {
-  .homepage > .container, .homepage > .container-sm {
+  .homepage {
+    .container {
       max-width: 95% !important;
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .homepage > .container, .homepage > .container-md, 
-  .homepage > .container-sm {
-      max-width: 94% !important;
+  .homepage > .container {
+    max-width: 94% !important;
   }
 }
 
 @media (min-width: 992px) {
-  .homepage > .container, .homepage > .container-lg, 
-  .homepage > .container-md, .homepage > .container-sm {
-      max-width: 93% !important;
+  .homepage > .container {
+    max-width: 93% !important;
   }
 }
 
 @media (min-width: 1200px) {
-  .homepage > .container, .homepage > .container-lg,
-  .homepage > .container-md, .homepage > .container-sm, 
-  .homepage > .container-xl {
-      max-width: 92% !important;
+  .homepage > .container {
+    max-width: 92% !important;
   }
 }
 
+@media (min-width: 1400px) {
+  .homepage > .container {
+    max-width: 85% !important;
+  }
+}
 
-// some global classes 
+// some global classes
 
-// all texts with this class gets new font 
+// all texts with this class gets new font
 .officina {
-  font-family: 'Nobile', sans-serif;
+  font-family: "Nobile", sans-serif;
 }
 
 // to create the pattern that story has
@@ -111,7 +130,7 @@ code {
   text-align: center;
   position: relative;
   z-index: 2;
-  
+
   &::before {
     @include story-ball(6rem);
     z-index: -1;

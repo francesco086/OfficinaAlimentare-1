@@ -1,22 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import Loader from 'Loader';
-import HomePage from './pages/Home';
-import reportWebVitals from './reportWebVitals';
+import Loader from "Loader";
+import HomePage from "./pages/Home";
+import reportWebVitals from "./reportWebVitals";
 
-import 'translation/i18n';
-import './styles/index.scss';
-
+import "translation/i18n";
+import "./styles/index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-      <Loader>
-        <HomePage />
-      </Loader>
+    <Loader>
+      <HomePage />
+    </Loader>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

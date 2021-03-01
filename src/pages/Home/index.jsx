@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Container from 'react-bootstrap/Container';
+import Container from "react-bootstrap/Container";
 
-import Portfolio from './components/Portfolio';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Header from './components/Header';
-import Story from './components/Story';
-import Team from './components/Team';
-import Context from './context';
-import Footer from 'components/Footer';
+import Portfolio from "./components/Portfolio";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Header from "./components/Header";
+import Story from "./components/Story";
+import Team from "./components/Team";
+import Context from "./context";
+import Footer from "components/Footer";
 
 class HomePage extends Component {
-
   state = {
-    passedHeader: false
-  }
+    passedHeader: false,
+  };
 
   constructor(props) {
     super(props);
@@ -23,11 +22,11 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll = (e) => {
@@ -36,38 +35,33 @@ class HomePage extends Component {
     let passedHeader = null;
     if (window.scrollY > threshold) {
       passedHeader = true;
-    }
-    else 
-    {
+    } else {
       passedHeader = false;
     }
-    if (passedHeader !== null && this.state.passedHeader !== passedHeader) this.setState({ passedHeader });
-  }
-
-  openPopup = (name) => {
-    console.log('opening popup')
-  }
+    if (passedHeader !== null && this.state.passedHeader !== passedHeader)
+      this.setState({ passedHeader });
+  };
 
   render() {
     const provides = {
       passedHeader: this.state.passedHeader,
-    }
+    };
 
     return (
       <div className="homepage">
         <Context.Provider value={provides}>
           <Header ref={this.headerRef} />
-          <Container>
-              <Services /> 
-              <Team />
-              <Story />
-              <Portfolio />
-              {/* <Contact />  */}
-          </Container>
+          <div className="container">
+            <Services />
+            <Team />
+            <Story />
+            <Portfolio />
+            {/* <Contact />  */}
+          </div>
           <Footer />
         </Context.Provider>
       </div>
-    )
+    );
   }
 }
 
