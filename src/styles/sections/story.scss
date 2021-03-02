@@ -5,80 +5,37 @@ section#story {
     width: 100%;
     position: relative;
     padding-top: 3rem;
-    &::before {
-      position: absolute;
-      top: 0;
-      left: calc(50% - 1px);
-      width: $lineWidth;
-      height: 100%;
-      background-color: gray;
-      content: '';
-    }
 
     div.timeline {
       margin-top: 6rem;
+      // width: 80%;
       &:first-child {
         margin-top: 0;
       }
 
+      img {
+        width: 10rem;
+        // align-self: right;
+        justify-self: right;
+      }
+      p {
+        text-align: justify;
+      }
+
       display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-areas: "text date";
+      grid-column-gap: 3.5rem;
+      grid-template-columns: 10fr 18fr;
 
-      &.right {
-        grid-template-areas: "date text";
+      div {
+        display: grid;
+        grid-template-columns: 8fr 10fr;
+        // grid-auto-rows: minmax(min-content, max-content);
+        grid-column-gap: 3.5rem;
+        align-content: center;
 
-        .text {
-          text-align: left;
-          padding-left: 2rem;
-          padding-right: 0;
-
-          &::after {
-            left: 0;
-          }
-
-          &::before {
-            right: auto;
-            left: -5rem;
-          }
+        img {
+          justify-self: left;
         }
-        .date {
-          justify-content: flex-end;
-          padding-right: 6rem;
-          padding-left: 0;
-        }
-      }
-      
-      .text {
-        grid-area: text;
-        text-align: right;
-        padding-right: 2rem;
-        position: relative;
-
-        &::after {
-          @include story-ball(1rem);
-          left: 100%;
-          border: $lineWidth solid gray;
-          background-color: white;
-        }
-
-        &::before {
-          content: '';
-          width: 5rem;
-          height: $lineWidth;
-          position: absolute;
-          right: -5rem;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: gray;
-        }
-      }
-      .date {
-        grid-area: date;
-        justify-content: flex-start;
-        align-items: center;
-        display: flex;
-        padding-left: 6rem;
       }
     }
   }

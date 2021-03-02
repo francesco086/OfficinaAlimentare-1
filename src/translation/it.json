@@ -11,7 +11,7 @@
   },
   "service": {
     "title": "Servizi",
-    "text": "…puntiamo dritti al cuore del problema, migliorare i prodotti, aumentare l’efficienza! <br/> Offriamo alle piccole e medie imprese la nostra pluriennale esperienza e competenza, per aiutarle a raggiungere livelli di eccellenza.",
+    "text": "…puntiamo dritti al cuore del problema, migliorare i prodotti, aumentare l’efficienza! Offriamo alle piccole e medie imprese la nostra pluriennale esperienza e competenza, per aiutarle a raggiungere livelli di eccellenza.",
     "product_development": {
       "title": "Sviluppo di nuovi prodotti",
       "texts": [
@@ -32,7 +32,7 @@
         "Redazione e/o verifica della conformità legale delle etichette.",
         "Audit dei fornitori per la qualifica, la sorveglianza o per indagare su gravi problemi di qualità.",
         "Corsi di formazione personalizzati, condotti col metodo partecipativo, su qualità, igiene e sicurezza degli alimenti e dell’alimentazione."
-      ] 
+      ]
     }
   },
   "team": {
@@ -47,11 +47,11 @@
         "name": "Biagio Calcavecchia",
         "role": "Food Technologist"
       }
-    ]  
+    ]
   },
   "contact": {
     "title": "Contatti",
-    
+
     "name": "Nome",
     "message": "Messaggio",
     "email": "Email",
@@ -79,10 +79,7 @@
   "footer": {
     "copyright": "© 2020 Officina Alimentare. Tutti i diritti riservati.",
     "title": "Officina Alimentare",
-    "texts": [
-      "Studio Professionale Associato",
-      "P. IVA 05122760282"
-    ],
+    "texts": ["Studio Professionale Associato", "P. IVA 05122760282"],
     "contact": "Contatti",
 
     "tel": {

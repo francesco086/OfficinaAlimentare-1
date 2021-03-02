@@ -5,13 +5,12 @@
   border-radius: 50%;
 }
 
-
 .slider-container {
   box-sizing: border-box;
   position: relative;
   height: calc(100% - 3rem); /*should be the same height as the images*/
   margin-top: 2rem;
-  // outline: 1px solid black; 
+  // outline: 1px solid black;
 
   .slider-image {
     box-sizing: border-box;
@@ -37,7 +36,7 @@
         height: 90%;
         width: 6px;
         background-color: $BLACK;
-        content: '';
+        content: "";
       }
     }
   }
@@ -47,7 +46,7 @@
     z-index: 9;
     cursor: ew-resize;
     /*set the appearance of the slider:*/
-    
+
     top: 50%;
     transform: translate(-3px, -50%);
 

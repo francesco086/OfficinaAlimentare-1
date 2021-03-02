@@ -54,10 +54,17 @@ code {
     margin-bottom: 10rem;
     padding-top: 5rem;
     .section-heading {
-      text-align: left;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
     .section-subheading {
+      position: relative;
       width: 40%;
+      left: 30%;
+      text-align: justify;
+
+      margin-bottom: 3rem;
     }
   }
 

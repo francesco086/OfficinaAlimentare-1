@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -36,10 +37,11 @@ const Nav = () => {
     <nav className={passedHeader ? ".passed" : ""}>
       <div className="title">
         <button className="hamburger" onClick={toggleHamburger}>
-          <span> </span>
+          <img src="assets/images/Logo.svg" alt="logo" />
+          <span className={`icon-cross ${hamburger ? "" : "hide"}`} />
         </button>
         <h1>
-          <a href="http://localhost:3000#" className="officina">
+          <a href="#" className="officina">
             {t("header.title")}
           </a>
         </h1>
@@ -85,7 +87,7 @@ export default React.forwardRef((props, ref) => {
       <Slider
         source="assets/images/slider/source.svg"
         overlay="assets/images/slider/overlay.svg"
-        logo="assets/images/slider/logo.svg"
+        logo="assets/images/Logo.svg"
       />
     </header>
   );
