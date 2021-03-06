@@ -3,7 +3,7 @@ section#portfolio {
     position: relative;
     width: 80%;
     margin-left: 10%;
-    height: 40vh;
+    height: 80vh;
     min-height: 200px;
 
     a {
@@ -20,9 +20,27 @@ section#portfolio {
         height: 100%;
       }
 
+      span {
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        padding: 0.5rem;
+        width: fit-content;
+        word-break: keep-all;
+
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+      }
+
       &:hover {
-        transform: translate(-50%, -50%) rotate(0) scale(0.4) !important;
+        transform: translate(-50%, -50%) rotate(0) scale(1) !important;
         z-index: 2;
+
+        span {
+          display: block;
+        }
       }
     }
   }

@@ -1,15 +1,24 @@
 footer {
   color: white;
   position: relative;
-  
+  background-color: $FOOTER_BACKGROUND;
+
+  img {
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    left: 0;
+    // transform: translateY(-50%);
+  }
+
   section {
     padding: 0 !important;
     margin: 0 !important;
+    position: relative;
   }
   section.upper {
     padding-top: 1rem !important;
     height: 20rem;
-    background-color: $FOOTER_BACKGROUND;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,7 +26,8 @@ footer {
 
     div {
       padding: 2rem;
-      h2, h4 {
+      h2,
+      h4 {
         margin-bottom: 1rem;
       }
       p {

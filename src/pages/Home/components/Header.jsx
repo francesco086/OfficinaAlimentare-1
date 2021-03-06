@@ -34,10 +34,10 @@ const Nav = () => {
   }
 
   return (
-    <nav className={passedHeader ? ".passed" : ""}>
+    <nav className={passedHeader ? "passed" : ""}>
       <div className="title">
         <button className="hamburger" onClick={toggleHamburger}>
-          <img src="assets/images/Logo.svg" alt="logo" />
+          <img src="assets/images/nav.svg" alt="logo" />
           <span className={`icon-cross ${hamburger ? "" : "hide"}`} />
         </button>
         <h1>

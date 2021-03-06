@@ -1,19 +1,42 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PropType from "prop-types";
 
-const names = ["laura"];
+const names = [
+  "Art A&amp_B Infestanti",
+  "Art TA Gelato",
+  "Art TA Tecnologo Alim",
+  "Conv CaffÇ Firenze",
+  "Conv SANA 2017",
+  "Conv SANA",
+  "Convegn Spreco",
+  "Convegno celebrativo 40 anni Cso Dietologia PV",
+  "Corso Gest Allerte",
+  "Cso Medicina Univ Cattolica Roma",
+  "Giornale Ilo-Ilo Filippine",
+  "Laboratorio del gusto Gorgonzola",
+  "Laboratorio del gusto Inzago",
+  "Laboratorio del gusto Melzo",
+  "Laboratorio del gusto Trezzo",
+  "Laboratorio del gusto Trezzo2",
+  "Laboratorio del gusto",
+  "Programma Tutti nello stesso piatto",
+  "Quotidiano Sikkim (India)",
+  "Seminario Univ Udine",
+];
 
 const Portfolio = ({ name, x, y, angle }) => (
   <a
     href={`assets/documents/portfolio/${name}.pdf`}
     target="_blank"
     style={{
-      transform: `translate(-50%, -50%) rotate(${angle}deg) scale(0.3)`,
+      transform: `translate(-50%, -50%) scale(1) rotate(${angle}deg)`,
       left: `${x}%`,
       top: `${y}%`,
     }}
   >
+    <span>{name}</span>
     <img src={`assets/images/portfolio/${name}.png`} alt={name} />
   </a>
 );
@@ -51,7 +74,7 @@ const Component = (props) => {
     properties.push({ x: ~~point.x, y: ~~point.y, angle: ~~angle });
   }
 
-  console.log("rerender");
+  // console.log("rerender");
 
   return (
     <section id="portfolio">
