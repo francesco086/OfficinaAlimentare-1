@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 
-import Container from "react-bootstrap/Container";
-
 import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
-import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Story from "./components/Story";
 import Team from "./components/Team";
