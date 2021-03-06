@@ -79,7 +79,6 @@ const Component = (props) => {
   return (
     <section id="portfolio">
       <h2 className="section-heading">{t("portfolio.title")}</h2>
-      <p className="section-subheading"> </p>
 
       <div className="collection">
         {names.map((name, index) => (
