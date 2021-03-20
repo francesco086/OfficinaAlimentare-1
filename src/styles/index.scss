@@ -81,11 +81,12 @@ code {
 }
 
 // MAX WIDTHS
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .homepage {
     section {
       .section-subheading {
         width: 100%;
+        left: 0;
         max-width: 100%;
       }
     }

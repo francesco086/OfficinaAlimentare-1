@@ -36,3 +36,10 @@ section#portfolio {
     }
   }
 }
+
+@media (max-width: 768px) {
+  section#portfolio  {
+    width: 100%;
+    left: 0;
+  }
+}

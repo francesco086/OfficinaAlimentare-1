@@ -17,3 +17,13 @@ section#service {
     }
   }
 }
+
+
+
+@media (max-width: 600px) {
+  section#service {
+    .service p {
+      text-align: center;
+    }
+  }
+}
