@@ -1,5 +1,6 @@
 section#team {
-  .row {
+
+    .row {
     width: 80%;
     position: relative;
     left: 10%;
@@ -13,7 +14,7 @@ section#team {
 
         img {
           height: 100%;
-          box-shadow: 0 0 6px rgb(172, 172, 172);
+          // box-shadow: 0 0 6px rgb(172, 172, 172);
         }
 
         margin-bottom: 2rem;

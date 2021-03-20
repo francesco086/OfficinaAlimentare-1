@@ -3,14 +3,18 @@ import { useTranslation } from "react-i18next";
 import Image from "react-bootstrap/Image";
 
 // direction can only be left | right
-const Timeline = ({ date, texts, direction = "left", image }) => {
+const Timeline = ({ date, texts }) => {
   return (
-    <div className={`timeline ${direction}`}>
-      <Image src={`assets/images/story/Story ${date} 1.svg`} />
-      <div>
+    <div className="timeline">
+      <div className="left">
+        <Image src={`assets/images/story/Story ${date} 1.svg`} />
+      </div>
+      <div className="text">
         {texts.map((text, index) => (
           <p key={index}>{text}</p>
         ))}
+      </div>
+      <div className="right">
         <Image src={`assets/images/story/Story ${date} 2.svg`} />
       </div>
     </div>
@@ -28,7 +32,6 @@ const Story = () => {
     {
       date: 2006,
       texts: t("story.timelines.1", { returnObjects: true }),
-      direction: "right",
     },
     {
       date: 2018,

@@ -7,6 +7,7 @@
 
 .slider-container {
   box-sizing: border-box;
+  // outline: 1rem solid blueviolet;
   position: relative;
   height: calc(100% - 3rem); /*should be the same height as the images*/
   margin-top: 2rem;
@@ -51,5 +52,18 @@
     transform: translate(-3px, -50%);
 
     @include dragger();
+  }
+}
+
+
+@keyframes Wiggle {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    left: 0rem;
+  }
+  10%, 50%, 90% {
+    left: -1rem;
+  }
+  30%, 70% {
+    left: 1rem;
   }
 }

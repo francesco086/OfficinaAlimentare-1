@@ -60,11 +60,11 @@ code {
     }
     .section-subheading {
       position: relative;
-      width: 40%;
-      left: 30%;
+      width: 60%;
+      left: 20%;
       text-align: justify;
 
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -96,32 +96,32 @@ code {
 @media (min-width: 576px) {
   .homepage {
     .container {
-      max-width: 95% !important;
+      max-width: 100% !important;
     }
   }
 }
 
 @media (min-width: 768px) {
   .homepage > .container {
-    max-width: 94% !important;
+    max-width: 69% !important;
   }
 }
 
 @media (min-width: 992px) {
   .homepage > .container {
-    max-width: 93% !important;
+    max-width: 68% !important;
   }
 }
 
 @media (min-width: 1200px) {
   .homepage > .container {
-    max-width: 92% !important;
+    max-width: 67% !important;
   }
 }
 
 @media (min-width: 1400px) {
   .homepage > .container {
-    max-width: 85% !important;
+    max-width: 60% !important;
   }
 }
 

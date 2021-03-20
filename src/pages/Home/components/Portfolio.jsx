@@ -36,7 +36,6 @@ const Portfolio = ({ name, x, y, angle }) => (
       top: `${y}%`,
     }}
   >
-    <span>{name}</span>
     <img src={`assets/images/portfolio/${name}.png`} alt={name} />
   </a>
 );
@@ -54,7 +53,7 @@ const Component = (props) => {
   const properties = [];
 
   function getPosition(times = 0) {
-    const x = 2 + Math.random() * 96;
+    const x = Math.random() * 100;
     const y = 25 + Math.random() * 75;
 
     for (let point of properties) {

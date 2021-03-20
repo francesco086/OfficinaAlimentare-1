@@ -18,14 +18,16 @@ footer {
     position: relative;
   }
   section.upper {
-    padding-top: 1rem !important;
+    padding-top: 3.5rem !important;
     height: 20rem;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 15rem;
+    grid-template-areas: "a t c";
+    grid-template-columns: 5fr 4fr 6fr;
+    // grid-column-gap: 15rem;
 
     div {
+      grid-area: t;
       padding: 2rem;
       h2,
       h4 {
@@ -40,14 +42,34 @@ footer {
         color: $WHITE;
       }
     }
+    div + div {
+      grid-area: c;
+    }
   }
   section.lower {
     height: 3rem;
-    background-color: $FOOTER_BACKGROUND;
+    width: 90%;
+    left: 10%;
+    // background-color: $FOOTER_BACKGROUND;
 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: small;
+  }
+}
+
+// MIN WIDTHS
+@media (min-width: 576px) {
+  .homepage {
+    footer {
+      section.upper {
+        height: 25rem;
+      }
+      section.lower {
+        width: 100%;
+        left: 0%;
+      }
+    }
   }
 }
