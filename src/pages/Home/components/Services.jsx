@@ -36,9 +36,9 @@ const Services = (props) => {
         dangerouslySetInnerHTML={{ __html: t("service.text") }}
       />
 
-      <Row>
+      <div className="box">
         {data.map(({ image, heading, texts }) => (
-          <Col className="service" key={heading} xs={12 / data.length}>
+          <div className="service" key={heading}>
             <h4 className="service-heading">{heading}</h4>
             <div className="image-container">
               <Image fluid src={image} roundedCircle />
@@ -51,9 +51,9 @@ const Services = (props) => {
                 </span>
               ))}
             </p>
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
     </section>
   );
 };

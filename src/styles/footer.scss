@@ -1,8 +1,12 @@
 footer {
   color: white;
   position: relative;
+  left: 0;
+  width: 100%;
+  bottom: 0;
   background-color: $FOOTER_BACKGROUND;
   margin-top: 20rem;
+  min-height: 30rem;
 
   img {
     position: absolute;
@@ -50,6 +54,8 @@ footer {
     height: 3rem;
     width: 90%;
     left: 10%;
+    position: absolute;
+    bottom: 0;
     // background-color: $FOOTER_BACKGROUND;
 
     display: flex;
@@ -70,6 +76,19 @@ footer {
         width: 100%;
         left: 0%;
       }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  footer {
+    section.upper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0fr 1fr 1fr;
+      grid-template-areas:
+        "a"
+        "t"
+        "c";
     }
   }
 }
