@@ -11,17 +11,17 @@ const Services = (props) => {
 
   const data = [
     {
-      image: "assets/images/services/services1.svg",
+      image: "/assets/images/services/services1.svg",
       heading: t("service.product_development.title"),
       texts: t("service.product_development.texts", { returnObjects: true }),
     },
     {
-      image: "assets/images/services/services2.svg",
+      image: "/assets/images/services/services2.svg",
       heading: t("service.problem_solving.title"),
       texts: t("service.problem_solving.texts", { returnObjects: true }),
     },
     {
-      image: "assets/images/services/services3.svg",
+      image: "/assets/images/services/services3.svg",
       heading: t("service.quality_assurance.title"),
       texts: t("service.quality_assurance.texts", { returnObjects: true }),
     },

@@ -14,13 +14,13 @@ const Team = () => {
   const members = [
     {
       name: t("team.members.0.name"),
-      avatar: "assets/images/team/Diego.svg",
+      avatar: "/assets/images/team/Diego.svg",
       role: t("team.members.0.role"),
       links: [{ url: "#", icon: faLinkedinIn }],
     },
     {
       name: t("team.members.1.name"),
-      avatar: "assets/images/team/Biagio.svg",
+      avatar: "/assets/images/team/Biagio.svg",
       role: t("team.members.1.role"),
       links: [{ url: "#", icon: faLinkedinIn }],
     },

@@ -36,7 +36,7 @@ const Portfolio = ({ name, x, y, angle }) => (
       top: `${y}%`,
     }}
   >
-    <img src={`assets/images/portfolio/${name}.png`} alt={name} />
+    <img src={`/assets/images/portfolio/${name}.png`} alt={name} />
   </a>
 );
 

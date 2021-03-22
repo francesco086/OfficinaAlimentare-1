@@ -7,7 +7,7 @@ const Timeline = ({ date, texts }) => {
   return (
     <div className="timeline">
       <div className="left">
-        <Image src={`assets/images/story/Story ${date} 1.svg`} />
+        <Image src={`/assets/images/story/Story ${date} 1.svg`} />
       </div>
       <div className="text">
         {texts.map((text, index) => (
@@ -15,7 +15,7 @@ const Timeline = ({ date, texts }) => {
         ))}
       </div>
       <div className="right">
-        <Image src={`assets/images/story/Story ${date} 2.svg`} />
+        <Image src={`/assets/images/story/Story ${date} 2.svg`} />
       </div>
     </div>
   );

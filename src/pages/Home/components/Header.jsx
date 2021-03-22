@@ -37,7 +37,7 @@ const Nav = () => {
     <nav className={passedHeader ? "passed" : ""}>
       <div className="title">
         <button className="hamburger" onClick={toggleHamburger}>
-          <img src="assets/images/nav.svg" alt="logo" />
+          <img src="/assets/images/nav.svg" alt="logo" />
           <span className={`icon-cross ${hamburger ? "" : "hide"}`} />
         </button>
         <h1>
@@ -62,16 +62,16 @@ const Nav = () => {
             onMouseOver={itHover}
             onMouseLeave={itNoHover}
           >
-            <img src="assets/images/flags/IT BW.svg" alt="it" />
-            {it && <img src="assets/images/flags/IT C.svg" alt="it-col" />}
+            <img src="/assets/images/flags/IT BW.svg" alt="it" />
+            {it && <img src="/assets/images/flags/IT C.svg" alt="it-col" />}
           </span>
           <span
             onClick={() => setLanguage("en")}
             onMouseOver={ukHover}
             onMouseLeave={ukNoHover}
           >
-            <img src="assets/images/flags/UK BW.svg" alt="uk" />
-            {uk && <img src="assets/images/flags/UK C.svg" alt="uk-col" />}
+            <img src="/assets/images/flags/UK BW.svg" alt="uk" />
+            {uk && <img src="/assets/images/flags/UK C.svg" alt="uk-col" />}
           </span>
         </div>
       </div>
@@ -85,9 +85,9 @@ export default React.forwardRef((props, ref) => {
     <header ref={ref}>
       <Nav />
       <Slider
-        source="assets/images/slider/source.svg"
-        overlay="assets/images/slider/overlay.svg"
-        logo="assets/images/Logo.svg"
+        source="/assets/images/slider/source.svg"
+        overlay="/assets/images/slider/overlay.svg"
+        logo="/assets/images/Logo.svg"
       />
     </header>
   );

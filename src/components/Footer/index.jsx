@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <img src="assets/images/footer.svg" alt="footer image" />
+      <img src="/assets/images/footer.svg" alt="footer image" />
       <section className="upper">
         <div>
           <h4>{t("footer.title")}</h4>
